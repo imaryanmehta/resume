@@ -1,112 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Mehta's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Aryan Mehta</h1>
-            <button class="menu-toggle">☰</button> <!-- Hamburger menu button -->
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certificates">Certificates</a></li>
-                    <li><a href="#interests">Interests</a></li>
-                    <li><a href="#strengths">Strengths</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm Aryan Mehta, a BCA student from JECRC University, Jaipur. I have a passion for coding and have experience in various programming languages and technologies. I am eager to contribute to the growth of the organization while furthering my own professional development.</p>
-        </div>
-    </section>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>Data Structures & Algorithms</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>C</li>
-                <li>PHP</li>
-                <li>Basic Web Development</li>
-            </ul>
-        </div>
-    </section>
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>KrishnaClarify (HTML, CSS, JavaScript):</strong> Demystifies the Bhagavad Gita’s wisdom, addresses doubts about Hindu Dharma, and offers free resources on Lord Krishna.</li>
-                <li><strong>SidcupGolfVibes:</strong> An animated website for Sidcup Family Golf using HTML, CSS, and JavaScript. Focuses on faithful recreation and seamless user interaction to enhance the company's online presence.</li>
-            </ul>
-        </div>
-    </section>
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
 
-    <section id="certificates">
-        <div class="container">
-            <h2>Certificates</h2>
-            <ul>
-                <li>Content Marketing Certified (HubSpot Academy): 02/2023 - 12/2025</li>
-                <li>Beginner to Pro Ethical Hacking: 06/2021 - Present</li>
-                <li>Google Ads Search Certification: 02/2023 - 12/2024</li>
-            </ul>
-        </div>
-    </section>
+header h1 {
+    margin: 0;
+    flex: 1; /* Allow header title to take available space */
+    text-align: left; /* Align title to the left */
+}
 
-    <section id="interests">
-        <div class="container">
-            <h2>Interests</h2>
-            <ul>
-                <li>Chanting</li>
-                <li>Chess</li>
-                <li>Traveling</li>
-                <li>Music</li>
-            </ul>
-        </div>
-    </section>
+.menu-toggle {
+    display: none;
+    background-color: #00aaff;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 1001; /* Ensure it appears above other elements */
+}
 
-    <section id="strengths">
-        <div class="container">
-            <h2>Strengths</h2>
-            <ul>
-                <li>Problem Solver</li>
-                <li>Adaptive</li>
-                <li>Productive</li>
-                <li>Attention to details</li>
-                <li>Strategic Thinking</li>
-            </ul>
-        </div>
-    </section>
+nav {
+    flex-grow: 1;
+}
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:imaryanmehta@gmail.com">imaryanmehta@gmail.com</a></p>
-            <p>Phone: 8383921787</p>
-            <p>Location: Jaipur</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/imaryanmehta">linkedin.com/in/imaryanmehta</a></p>
-        </div>
-    </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Aryan Mehta</p>
-        </div>
-    </footer>
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+section {
+    padding: 5em 2em;
+    margin-top: 4em;
+    background-color: #f4f4f4;
+}
+
+section:nth-of-type(even) {
+    background-color: #e2e2e2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    header .container {
+        padding: 0 1.5em;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+    
+    section {
+        padding: 4em 1.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav ul.active {
+        display: flex;
+        max-height: 500px; /* Adjust based on the content size */
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    section {
+        padding: 3em 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        padding: 0 1em;
+    }
+    
+    nav ul li {
+        margin: 8px 0;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+    
+    section {
+        padding: 2.5em 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 24px;
+    }
+    
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 2em 0.5em;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Landscape and Smaller Devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 1.5em 0.5em;
+    }
+}
