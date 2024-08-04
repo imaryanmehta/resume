@@ -25,4 +25,24 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
     });
+
+    // Smooth scroll to section heading
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+
+            window.scrollTo({
+                top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
 });
