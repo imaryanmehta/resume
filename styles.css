@@ -245,3 +245,65 @@ section.show {
         padding: 1.5em 0.5em;
     }
 }
+/* General Section Styling */
+section {
+    padding: 3em 0;
+    background-color: #f8f8f8;
+}
+
+section h2 {
+    text-align: left; /* Aligns heading text to the left */
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0; /* Removes centering of the container */
+    text-align: left; /* Ensures text within section-content is left-aligned */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-content {
+        padding: 0 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Specific Styling for Education and Soft Skills Sections */
+#education .education-item,
+#soft-skills .skills-list li {
+    background-color: #fff;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Aligns text within each item to the left */
+}
+
+#education .education-item h3,
+#soft-skills .skills-list li strong {
+    color: #007bff;
+}
+
+#education .education-item p,
+#soft-skills .skills-list li {
+    margin: 0.5em 0;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-content {
+        padding: 0 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
